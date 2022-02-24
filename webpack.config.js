@@ -6,7 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: "development",
     entry: {
-        main : path.resolve(__dirname, "./src/index.tsx")        
+        main : path.resolve(__dirname, "./src/index.tsx"),
+        sw: path.resolve(__dirname, "./src/sw.ts")
     },
     devtool: "source-map",
     module: {
@@ -62,7 +63,7 @@ module.exports = {
             inject: true,
         }),
         new webpack.DefinePlugin({
-        })
+        }),
     ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".scss"],

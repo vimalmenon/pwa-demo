@@ -9,7 +9,8 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 module.exports = {
     mode: "production",
     entry: {
-        main : path.resolve(__dirname, "./src/index.tsx")        
+        main : path.resolve(__dirname, "./src/index.tsx"),
+        sw: path.resolve(__dirname, "./src/sw.ts")     
     },
     output : {
         path : path.resolve(__dirname, './public'),
