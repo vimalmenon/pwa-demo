@@ -2,6 +2,9 @@ const version = "0.0.0";
 
 const cacheList = [
 	"/",
+    "/fonts/manifest.json",
+    "/fonts/192x192.png",
+    "/fonts/512x512.png",
 	"/main.js"
 ];
 

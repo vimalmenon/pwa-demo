@@ -2,6 +2,7 @@ const path = require("path");
 const webpack  = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -32,7 +33,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg|jpe?g|png|gif|svg|jpg|pdf|ico|webmanifest)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot|svg|jpe?g|png|gif|svg|jpg|pdf|ico|webmanifest|json)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -64,6 +65,13 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
         }),
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/manifest.json", to: "fonts/manifest.json" },
+              { from: "./src/image/192x192.png", to: "fonts/192x192.png" },
+              { from: "./src/image/512x512.png", to: "fonts/512x512.png" },
+            ],
+          }),
     ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".scss"],
