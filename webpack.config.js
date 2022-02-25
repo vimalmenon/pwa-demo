@@ -11,6 +11,9 @@ module.exports = {
         sw: path.resolve(__dirname, "./src/sw.ts")
     },
     devtool: "source-map",
+    devServer: {
+        historyApiFallback: true,
+    },
     module: {
         rules: [
             {

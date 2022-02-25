@@ -1,3 +1,6 @@
+import {Home, NoCss, Table} from "../Page";
+
+
 export const Pages = [
     {
         link: "/",
@@ -29,6 +32,9 @@ export const FakeLinks = [
 ];
 
 export const PageLinks = {
+    "/": {
+        next: "/no-css",
+    },
     "/no-css" : {
         previous: "/",
         next: "/table",
@@ -38,3 +44,23 @@ export const PageLinks = {
         next: "",
     }
 }
+
+export const Routes = [
+   {
+        path:"/",
+        Component: Home
+    },
+    {
+        path:"/no-css",
+        Component: NoCss
+    },
+    {
+        path:"/table",
+        Component: Table
+    },
+    {
+        path:"*",
+        Component: Home
+    }
+]
+

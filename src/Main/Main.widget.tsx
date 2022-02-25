@@ -1,27 +1,24 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import {Home, NoCss, Table} from "../Page";
 import {Layout} from "../Component";
+
+import {Routes as routes} from "../Data"
 
 
 export const Main:React.FC = () => {
     return (
         <Layout>
             <Routes>
-                <Route 
-                    path="/" 
-                    element={<Home />} />
-                <Route 
-                    path="no-css" 
-                    element={<NoCss />} />
-                <Route 
-                    path="table" 
-                    element={<Table />} />
-                <Route
-                    path="*"
-                    element={<Home />}
-                    />
+                {routes.map((route, key) => {
+                    const {Component, path} = route;
+                    return (
+                        <Route 
+                            path={path} 
+                            element={<Component />}
+                            key={key} />
+                    )
+                })}
             </Routes>
         </Layout>
     );

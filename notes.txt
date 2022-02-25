@@ -11,6 +11,8 @@ Todo's:
 
   * Page:
     Need to have some basic animation
+  
+  * Bug:
 
   * Navigation:
     home
@@ -20,6 +22,7 @@ Todo's:
       responsive-layout
       animation-layout
       javascript-layout
+      spa-layout
       pwa-layout
 
 
@@ -27,6 +30,9 @@ Completed:
   Feature:
 
   Content:
+
+  Bug:
+    Need to fix the main route
 
   Page:
     Need to have a basic layout
