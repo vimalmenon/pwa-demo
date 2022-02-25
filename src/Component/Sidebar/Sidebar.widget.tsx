@@ -3,6 +3,10 @@ import { useLocation } from 'react-router';
 
 import { FakeSidebar, PageLinks } from '../../Data';
 
+import { Css } from './Css';
+import { Table } from './Table';
+import { NoCss } from './NoCss';
+
 export const Sidebar: React.FC = () => {
   const location = useLocation();
   const onNavigation = (event) => {
@@ -14,62 +18,11 @@ export const Sidebar: React.FC = () => {
   const { id } = PageLinks[location.pathname] || {};
   switch (id) {
     case 1:
-      return (
-        <aside>
-          {FakeSidebar.map((link, key) => {
-            return (
-              <div key={key}>
-                <a href="" onClick={onNavigation}>
-                  {link.label}
-                </a>
-                {link.subLinks.map((sublink, innerkey) => {
-                  return (
-                    <div key={innerkey}>
-                      <a href="" onClick={onNavigation}>
-                        {sublink.label}
-                      </a>
-                    </div>
-                  );
-                })}
-                <div></div>
-              </div>
-            );
-          })}
-        </aside>
-      );
+      return <NoCss FakeSidebar={FakeSidebar} onNavigation={onNavigation} />;
     case 2:
-      return (
-        <table width={'150px'} style={{ margin: '10px 0' }}>
-          <tbody>
-            {FakeSidebar.map((link, key) => {
-              return (
-                <tr key={key}>
-                  <td>
-                    <a href="" onClick={onNavigation}>
-                      {link.label}
-                    </a>
-                    {link.subLinks.map((sublink, innerkey) => {
-                      return (
-                        <table key={innerkey} style={{ marginLeft: '20px' }}>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <a href="" onClick={onNavigation}>
-                                  {sublink.label}
-                                </a>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      );
-                    })}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      );
+      return <Table FakeSidebar={FakeSidebar} onNavigation={onNavigation} />;
+    case 3:
+      return <Css FakeSidebar={FakeSidebar} onNavigation={onNavigation} />;
     default:
       return null;
   }

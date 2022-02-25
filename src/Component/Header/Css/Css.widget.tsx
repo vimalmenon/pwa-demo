@@ -4,21 +4,32 @@ import React from 'react';
 const Header = styled('header')({
   display: 'flex',
   flex: '1',
-  background: 'red',
+  padding: '15px 10px',
+});
+
+const Navigation = styled('nav')({
+  display: 'flex',
+});
+
+const Item = styled('div')({
+  display: 'flex',
+  padding: '10px',
 });
 
 export const Css: React.FC<any> = ({ FakeLinks, onNavigation }) => {
   return (
     <Header>
-      <nav>
+      <Navigation>
         {FakeLinks.map((link, key) => {
           return (
-            <a href="" onClick={onNavigation} key={key}>
-              {link.label}
-            </a>
+            <Item key={key}>
+              <a href="" onClick={onNavigation}>
+                {link.label}
+              </a>
+            </Item>
           );
         })}
-      </nav>
+      </Navigation>
     </Header>
   );
 };

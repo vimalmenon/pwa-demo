@@ -14,7 +14,6 @@ import { Css } from './Css';
 export const Layout: React.FC = ({ children }) => {
   const location = useLocation();
   const { title, id } = PageLinks[location.pathname] || {};
-
   return (
     <Navigate>
       <CssBaseline />
