@@ -31,15 +31,53 @@ export const FakeLinks = [
     }
 ];
 
+export const FakeSidebar = [
+    {
+        link: "",
+        label: "Menu 1",
+        subLinks: [
+            {
+                link: "",
+                label: "Sub Menu 1",
+            },
+            {
+                link: "",
+                label: "Sub Menu 2",
+            }
+        ]
+    },
+    {
+        link: "",
+        label: "Menu 2",
+        subLinks: [
+            {
+                link: "",
+                label: "2 Sub Menu 1",
+            },
+            {
+                link: "",
+                label: "2 Sub Menu 2",
+            }
+        ]
+    },
+    {
+        link: "",
+        label: "Menu 3",
+        subLinks: []
+    }
+]
+
 export const PageLinks = {
     "/": {
         next: "/no-css",
     },
     "/no-css" : {
+        title: "Page without CSS",
         previous: "/",
         next: "/table",
     },
     "/table" : {
+        title: "Page with table",
         previous: "/no-css",
         next: "",
     }

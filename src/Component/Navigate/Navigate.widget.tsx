@@ -13,27 +13,38 @@ const Container = styled('div')({
     display: "flex",
     flex: "1",
 });
+
+const SidePanel = styled('div')({
+    display: "flex",
+    flex: "0 0 50px",
+    justifyContent: "center",
+    alignItems: "center"
+});
+
+const MainPanel = styled('div')({
+    display: "flex",
+    flex: "1 1 auto",
+});
   
 
 export const Navigate:React.FC = ({children}) => {
     const location = useLocation();
     const {previous, next} = PageLinks[location.pathname] || {};
-
     return (
         <Container>
-            <div>
+            <SidePanel>
                 {previous && <div>
                     <Link to={previous}><ArrowBackIosNewIcon /></Link>
                 </div>}
-            </div>
-            <div>
+            </SidePanel>
+            <MainPanel>
                 {children}
-            </div>
-            <div>
+            </MainPanel>
+            <SidePanel>
                 {next&& <div>
                     <Link to={next}><ArrowForwardIosIcon /></Link>
                 </div>}
-            </div>
+            </SidePanel>
         </Container>
     )
 }
