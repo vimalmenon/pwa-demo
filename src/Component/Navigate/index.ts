@@ -1,1 +1,1 @@
-export * from "./Navigate.widget";
+export * from './Navigate.widget';

@@ -1,10 +1,5 @@
-import React from "react";
+import React from 'react';
 
-
-export const Table:React.FC = () => {
-    return (
-        <div>
-            This is table
-        </div>
-    )
-}
+export const Table: React.FC = () => {
+  return <div>This is table</div>;
+};

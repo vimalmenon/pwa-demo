@@ -1,1 +1,1 @@
-export * from "./Sidebar.widget";
+export * from './Sidebar.widget';

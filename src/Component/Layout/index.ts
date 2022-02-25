@@ -1,1 +1,1 @@
-export * from "./Layout.widget";
+export * from './Layout.widget';

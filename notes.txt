@@ -2,6 +2,8 @@
 Todo's:
   *Feature:
     Need to set up PWA Page
+    Need to set up linting
+    Need to set up prettify
 
   *Content:
     Evolution of websites

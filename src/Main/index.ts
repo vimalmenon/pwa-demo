@@ -1,1 +1,1 @@
-export * from "./Main.widget";
+export * from './Main.widget';

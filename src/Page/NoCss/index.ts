@@ -1,1 +1,1 @@
-export * from "./NoCss.widget"
+export * from './NoCss.widget';
