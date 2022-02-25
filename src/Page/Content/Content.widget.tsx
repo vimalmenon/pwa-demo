@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const NoCss: React.FC = () => {
+export const Content: React.FC = () => {
   return (
     <div>
       <div>

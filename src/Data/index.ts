@@ -1,4 +1,4 @@
-import { Home, NoCss, Table } from '../Page';
+import { Home, Content, Table } from '../Page';
 
 export const Pages = [
   {
@@ -89,11 +89,11 @@ export const Routes = [
   },
   {
     path: '/no-css',
-    Component: NoCss,
+    Component: Content,
   },
   {
     path: '/table',
-    Component: Table,
+    Component: Content,
   },
   {
     path: '*',
