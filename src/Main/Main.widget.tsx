@@ -1,18 +1,13 @@
 import React from "react";
-import { Routes, Route , Link} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import {Home, NoCss} from "../Page";
+import {Home, NoCss, Table} from "../Page";
 import {Layout} from "../Component";
 
 
 export const Main:React.FC = () => {
     return (
         <Layout>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/no-css">No Css</Link>
-                <Link to="/no-csss">No Link</Link>
-            </nav>
             <Routes>
                 <Route 
                     path="/" 
@@ -20,6 +15,9 @@ export const Main:React.FC = () => {
                 <Route 
                     path="no-css" 
                     element={<NoCss />} />
+                <Route 
+                    path="table" 
+                    element={<Table />} />
                 <Route
                     path="*"
                     element={<Home />}
