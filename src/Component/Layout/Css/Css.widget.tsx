@@ -11,18 +11,25 @@ const Container = styled('section')({
   flexDirection: 'column',
 });
 
+const Section = styled('section')({
+  display: 'flex',
+  flex: '1',
+});
+
 export const Css: React.FC<any> = ({ title, children, show }) => {
   if (show) {
     return (
       <Container>
         <Header />
-        <Sidebar />
-        <section>
-          <div>
-            <h1>{title}</h1>
-          </div>
-          <div>{children}</div>
-        </section>
+        <Section>
+          <Sidebar />
+          <section>
+            <div>
+              <h1>{title}</h1>
+            </div>
+            <div>{children}</div>
+          </section>
+        </Section>
         <Footer />
       </Container>
     );

@@ -2,10 +2,6 @@ import { Home, Content } from '../Page';
 
 export const Pages = [
   {
-    link: '/',
-    label: 'Home',
-  },
-  {
     link: '/no-css',
     label: 'No CSS layout',
   },
@@ -16,6 +12,18 @@ export const Pages = [
   {
     link: '/css',
     label: 'CSS layout',
+  },
+  {
+    link: '/responsive',
+    label: 'Responsive and Animation layout',
+  },
+  {
+    link: '/javascript',
+    label: 'Javascript and Single Page Application (SPA)',
+  },
+  {
+    link: '/pwa',
+    label: 'Progressive Web Application',
   },
 ];
 
@@ -98,8 +106,26 @@ export const PageLinks = {
   },
   '/css': {
     id: 3,
-    title: 'Page with CSS',
+    title: 'Page with CSS, but not responsive',
     previous: '/table',
+    next: '/responsive',
+  },
+  '/responsive': {
+    id: 4,
+    title: 'Page are responsive and have animations',
+    previous: '/css',
+    next: '/javascript',
+  },
+  '/javascript': {
+    id: 5,
+    title: 'Page are support Javascript and Support SPA application',
+    previous: '/responsive',
+    next: '/pwa',
+  },
+  '/pwa': {
+    id: 6,
+    title: 'Page are taking over native application',
+    previous: '/javascript',
     next: '',
   },
 };
@@ -119,6 +145,18 @@ export const Routes = [
   },
   {
     path: '/css',
+    Component: Content,
+  },
+  {
+    path: '/responsive',
+    Component: Content,
+  },
+  {
+    path: '/javascript',
+    Component: Content,
+  },
+  {
+    path: '/pwa',
     Component: Content,
   },
   {

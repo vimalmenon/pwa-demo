@@ -2,8 +2,6 @@
 Todo's:
   *Feature:
     Need to set up PWA Page
-    Need to set up linting
-    Need to set up prettify
 
   *Content:
     Evolution of websites
@@ -21,15 +19,15 @@ Todo's:
       no-css-layout
       table-layout
       css-layout
-      responsive-layout
-      animation-layout
+      responsive-layout / animation-layout
       javascript-layout
       spa-layout
       pwa-layout
 
-
 Completed:
   Feature:
+    Need to set up linting
+    Need to set up prettify
 
   Content:
 
@@ -39,7 +37,3 @@ Completed:
   Page:
     Need to have a basic layout
     Need to create different routes
-
-
-
-  

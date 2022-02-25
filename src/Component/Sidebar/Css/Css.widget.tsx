@@ -1,8 +1,16 @@
+import styled from '@emotion/styled';
 import React from 'react';
+
+const Aside = styled('aside')({
+  display: 'flex',
+  flex: '0 0 250px',
+  margin: '20px',
+  flexDirection: 'column',
+});
 
 export const Css: React.FC<any> = ({ FakeSidebar, onNavigation }) => {
   return (
-    <aside>
+    <Aside>
       {FakeSidebar.map((link, key) => {
         return (
           <div key={key}>
@@ -22,6 +30,6 @@ export const Css: React.FC<any> = ({ FakeSidebar, onNavigation }) => {
           </div>
         );
       })}
-    </aside>
+    </Aside>
   );
 };
