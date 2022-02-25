@@ -1,8 +1,15 @@
+import styled from '@emotion/styled';
 import React from 'react';
+
+const Header = styled('header')({
+  display: 'flex',
+  flex: '1',
+  background: 'red',
+});
 
 export const Css: React.FC<any> = ({ FakeLinks, onNavigation }) => {
   return (
-    <header>
+    <Header>
       <nav>
         {FakeLinks.map((link, key) => {
           return (
@@ -12,6 +19,6 @@ export const Css: React.FC<any> = ({ FakeLinks, onNavigation }) => {
           );
         })}
       </nav>
-    </header>
+    </Header>
   );
 };
