@@ -1,31 +1,23 @@
 import React from "react";
-import {useLocation} from "react-router";
-
+import CssBaseline from '@mui/material/CssBaseline';
 
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 import {Sidebar} from "../Sidebar";
-
-import {PageLinks} from "../../Data";
-import { Link } from "react-router-dom";
+import {Navigate} from "../Navigate";
 
 export const Layout:React.FC = ({children}) => {
-    const location = useLocation();
-    const {previous, next} = PageLinks[location.pathname] || {};
     return (
-        <section>
-            <Header />
-            <Sidebar />
-            {previous && <div>
-                <Link to={previous}>Previous</Link>
-            </div>}
+        <Navigate>
+            <CssBaseline />
             <section>
-                {children}
+                <Header />
+                <Sidebar />
+                <section>
+                    {children}
+                </section>
+                <Footer />
             </section>
-            {next&& <div>
-                <Link to={next}>Next</Link>
-            </div>}
-            <Footer />
-        </section>
+        </Navigate>
     )
 }
