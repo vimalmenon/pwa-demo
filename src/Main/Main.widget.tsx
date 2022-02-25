@@ -11,7 +11,11 @@ export const Main: React.FC = () => {
       <Routes>
         {routes.map((route, key) => {
           const { Component, path } = route;
-          return <Route path={path} element={<Component />} key={key} />;
+          return (
+            <React.Fragment key={key}>
+              <Route path={path} element={<Component />} />
+            </React.Fragment>
+          );
         })}
       </Routes>
     </Layout>

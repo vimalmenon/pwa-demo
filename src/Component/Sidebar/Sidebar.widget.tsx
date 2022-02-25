@@ -7,7 +7,6 @@ export const Sidebar: React.FC = () => {
   const location = useLocation();
   const onNavigation = (event) => {
     event.preventDefault();
-    console.log(location);
   };
   if (location.pathname === '/') {
     return null;

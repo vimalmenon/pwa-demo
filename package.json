@@ -6,7 +6,7 @@
   "scripts": {
     "start:server": "webpack serve",
     "build:prod": "webpack --config webpack.prod.config.js",
-    "lint": "eslint ./ --ext .js,.ts,.tsx --fix"
+    "lint": "eslint ./ --ext .ts,.tsx --fix"
   },
   "repository": {
     "type": "git",

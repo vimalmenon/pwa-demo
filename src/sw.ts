@@ -1,3 +1,4 @@
+/* eslint-disable */
 const version = '0.0.0';
 
 const cacheList = [
@@ -45,5 +46,7 @@ self.addEventListener('fetch', (event: any) => {
 });
 
 self.addEventListener('beforeinstallprompt', (e) => {
-  console.log('this is called');
+  console.log('this is called', e);
 });
+
+/* eslint-enable */
