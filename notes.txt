@@ -1,0 +1,25 @@
+
+Todo's:
+  *Feature:
+    Need to set up PWA Page
+
+  *Content:
+    Evolution of websites
+    What is PWA
+    Stages for PWA
+    Offline sync
+
+  * Page:
+    Need to have a basic layout
+    Need to have some basic animation
+    Need to create different routes
+
+
+Completed:
+  Feature:
+
+  Content:
+
+  Page:
+
+  
