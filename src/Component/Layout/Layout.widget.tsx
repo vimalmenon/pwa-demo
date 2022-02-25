@@ -63,6 +63,23 @@ export const Layout: React.FC = ({ children }) => {
           </table>
         </Navigate>
       );
+    case 3:
+      return (
+        <Navigate>
+          <CssBaseline />
+          <section>
+            <Header />
+            <Sidebar />
+            <section>
+              <div>
+                <h1>{title}</h1>
+              </div>
+              <div>{children}</div>
+            </section>
+            <Footer />
+          </section>
+        </Navigate>
+      );
     default:
       return (
         <Navigate>

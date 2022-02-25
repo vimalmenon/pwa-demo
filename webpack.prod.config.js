@@ -2,7 +2,7 @@ const path = require("path");
 const webpack  = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const CopyPlugin = require("copy-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 
@@ -83,7 +83,15 @@ module.exports = {
             cleanOnceBeforeBuildPatterns: ['**/*']
         }),
         new webpack.DefinePlugin({
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/manifest.json", to: "fonts/manifest.json" },
+              { from: "./src/image/192x192.png", to: "fonts/192x192.png" },
+              { from: "./src/image/512x512.png", to: "fonts/512x512.png" },
+              { from: "./src/image/favicon.ico", to: "favicon.ico" },
+            ],
+        }),
     ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".scss"],

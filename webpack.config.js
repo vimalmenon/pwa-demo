@@ -73,8 +73,9 @@ module.exports = {
               { from: "./src/manifest.json", to: "fonts/manifest.json" },
               { from: "./src/image/192x192.png", to: "fonts/192x192.png" },
               { from: "./src/image/512x512.png", to: "fonts/512x512.png" },
+              { from: "./src/image/favicon.ico", to: "favicon.ico" },
             ],
-          }),
+        }),
     ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".scss"],

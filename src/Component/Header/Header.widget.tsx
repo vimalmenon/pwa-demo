@@ -2,6 +2,10 @@ import React from 'react';
 import { useLocation } from 'react-router';
 import { FakeLinks, PageLinks } from '../../Data';
 
+import { Table } from './Table';
+import { NoCss } from './NoCss';
+import { Css } from './Css';
+
 export const Header: React.FC = () => {
   const location = useLocation();
   const onNavigation = (event) => {
@@ -13,37 +17,11 @@ export const Header: React.FC = () => {
   const { id } = PageLinks[location.pathname] || {};
   switch (id) {
     case 1:
-      return (
-        <header>
-          <nav>
-            {FakeLinks.map((link, key) => {
-              return (
-                <a href="" onClick={onNavigation} key={key}>
-                  {link.label}
-                </a>
-              );
-            })}
-          </nav>
-        </header>
-      );
+      return <NoCss FakeLinks={FakeLinks} onNavigation={onNavigation} />;
     case 2:
-      return (
-        <table cellSpacing={'15px'}>
-          <tbody>
-            <tr>
-              {FakeLinks.map((link, key) => {
-                return (
-                  <td key={key} style={{ borderSpacing: '10px' }}>
-                    <a href="" onClick={onNavigation}>
-                      {link.label}
-                    </a>
-                  </td>
-                );
-              })}
-            </tr>
-          </tbody>
-        </table>
-      );
+      return <Table FakeLinks={FakeLinks} onNavigation={onNavigation} />;
+    case 3:
+      return <Css FakeLinks={FakeLinks} onNavigation={onNavigation} />;
     default:
       return null;
   }

@@ -13,6 +13,10 @@ export const Pages = [
     link: '/table',
     label: 'Table layout',
   },
+  {
+    link: '/css',
+    label: 'CSS layout',
+  },
 ];
 
 export const FakeLinks = [
@@ -90,6 +94,12 @@ export const PageLinks = {
     id: 2,
     title: 'Page with table',
     previous: '/no-css',
+    next: '/css',
+  },
+  '/css': {
+    id: 3,
+    title: 'Page with CSS',
+    previous: '/table',
     next: '',
   },
 };
@@ -105,6 +115,10 @@ export const Routes = [
   },
   {
     path: '/table',
+    Component: Content,
+  },
+  {
+    path: '/css',
     Component: Content,
   },
   {

@@ -7,6 +7,7 @@ const cacheList = [
   '/fonts/192x192.png',
   '/fonts/512x512.png',
   '/main.js',
+  '/favicon.ico'
 ];
 
 self.addEventListener('install', (event: any) => {
