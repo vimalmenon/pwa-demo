@@ -11,21 +11,64 @@ import { PageLinks } from '../../Data';
 
 export const Layout: React.FC = ({ children }) => {
   const location = useLocation();
-  const { title } = PageLinks[location.pathname] || {};
-  return (
-    <Navigate>
-      <CssBaseline />
-      <section>
-        <Header />
-        <Sidebar />
-        <section>
-          <div>
-            <h1>{title}</h1>
-          </div>
+  const { title, id } = PageLinks[location.pathname] || {};
+  switch (id) {
+    case 1:
+      return (
+        <Navigate>
+          <CssBaseline />
+          <section>
+            <Header />
+            <Sidebar />
+            <section>
+              <div>
+                <h1>{title}</h1>
+              </div>
+              <div>{children}</div>
+            </section>
+            <Footer />
+          </section>
+        </Navigate>
+      );
+    case 2:
+      return (
+        <Navigate>
+          <CssBaseline />
+          <table style={{ border: '1pd solid black' }}>
+            <tbody>
+              <tr>
+                <td colSpan={2}>
+                  <Header />
+                </td>
+              </tr>
+              <tr>
+                <td style={{ verticalAlign: 'top' }}>
+                  <Sidebar />
+                </td>
+                <td>
+                  <section>
+                    <div>
+                      <h1>{title}</h1>
+                    </div>
+                    <div>{children}</div>
+                  </section>
+                </td>
+              </tr>
+              <tr>
+                <td colSpan={2}>
+                  <Footer />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Navigate>
+      );
+    default:
+      return (
+        <Navigate>
+          <CssBaseline />
           <div>{children}</div>
-        </section>
-        <Footer />
-      </section>
-    </Navigate>
-  );
+        </Navigate>
+      );
+  }
 };

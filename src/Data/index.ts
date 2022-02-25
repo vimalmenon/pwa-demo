@@ -1,4 +1,4 @@
-import { Home, Content, Table } from '../Page';
+import { Home, Content } from '../Page';
 
 export const Pages = [
   {
@@ -37,11 +37,11 @@ export const FakeSidebar = [
     subLinks: [
       {
         link: '',
-        label: 'Sub Menu 1',
+        label: '1 Sub Menu 1',
       },
       {
         link: '',
-        label: 'Sub Menu 2',
+        label: '1 Sub Menu 2',
       },
     ],
   },
@@ -62,20 +62,32 @@ export const FakeSidebar = [
   {
     link: '',
     label: 'Menu 3',
-    subLinks: [],
+    subLinks: [
+      {
+        link: '',
+        label: '3 Sub Menu 1',
+      },
+      {
+        link: '',
+        label: '3 Sub Menu 2',
+      },
+    ],
   },
 ];
 
 export const PageLinks = {
   '/': {
+    id: 0,
     next: '/no-css',
   },
   '/no-css': {
+    id: 1,
     title: 'Page without CSS',
     previous: '/',
     next: '/table',
   },
   '/table': {
+    id: 2,
     title: 'Page with table',
     previous: '/no-css',
     next: '',
