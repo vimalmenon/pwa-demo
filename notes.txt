@@ -10,9 +10,17 @@ Todo's:
     Offline sync
 
   * Page:
-    Need to have a basic layout
     Need to have some basic animation
-    Need to create different routes
+
+  * Navigation:
+    home
+      no-css-layout
+      table-layout
+      css-layout
+      responsive-layout
+      animation-layout
+      javascript-layout
+      pwa-layout
 
 
 Completed:
@@ -21,5 +29,9 @@ Completed:
   Content:
 
   Page:
+    Need to have a basic layout
+    Need to create different routes
+
+
 
   
