@@ -1,3 +1,4 @@
+https://web.dev/install-criteria/
 
 Todo's:
   *Feature:
@@ -8,11 +9,21 @@ Todo's:
     What is PWA
     Stages for PWA
     Offline sync
+    Badge API
+    Notification API
 
   * Page:
     Need to have some basic animation
   
   * Bug:
+
+
+Completed:
+  Feature:
+
+  Content:
+
+  Bug:
 
   * Navigation:
     home
@@ -20,20 +31,8 @@ Todo's:
       table-layout
       css-layout
       responsive-layout / animation-layout
-      javascript-layout
-      spa-layout
+      javascript-layout / spa-layout
       pwa-layout
 
-Completed:
-  Feature:
-    Need to set up linting
-    Need to set up prettify
-
-  Content:
-
-  Bug:
-    Need to fix the main route
-
   Page:
-    Need to have a basic layout
-    Need to create different routes
+
